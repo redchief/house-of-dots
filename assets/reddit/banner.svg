@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="384" viewBox="0 0 1920 384">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff5414"/>
+      <stop offset="1" stop-color="#d93900"/>
+    </linearGradient>
+    <pattern id="dots" width="64" height="64" patternUnits="userSpaceOnUse" x="0" y="0">
+      <circle cx="32" cy="32" r="5" fill="#fff" opacity=".55"/>
+    </pattern>
+    <!-- fade the board out behind the title so the text stays readable -->
+    <radialGradient id="fade" cx=".5" cy=".5" r=".5" gradientTransform="translate(0 -1) scale(1 3)">
+      <stop offset=".22" stop-color="#000"/>
+      <stop offset=".55" stop-color="#fff"/>
+    </radialGradient>
+    <mask id="m"><rect width="1920" height="384" fill="url(#fade)"/></mask>
+  </defs>
+
+  <rect width="1920" height="384" fill="url(#bg)"/>
+
+  <g mask="url(#m)">
+    <!-- a game in progress: grid points sit at 32 + 64n -->
+    <g fill="#fff" opacity=".18">
+      <rect x="160" y="96" width="64" height="64"/><rect x="224" y="96" width="64" height="64"/>
+      <rect x="1632" y="224" width="64" height="64"/><rect x="1696" y="160" width="64" height="64"/>
+    </g>
+    <g fill="none" stroke-width="7" stroke-linecap="round">
+      <path d="M160 96H288V160H160Z M224 96V160" stroke="#fff" opacity=".9"/>
+      <path d="M96 224H224V288 M32 160V288" stroke="#0079d3"/>
+      <path d="M352 32V160H416 M416 224H480V352" stroke="#ffd635"/>
+      <path d="M1632 224H1696V288H1632Z M1696 160H1760V224H1696" stroke="#fff" opacity=".9"/>
+      <path d="M1504 96H1568V160 M1824 96V224H1888" stroke="#0079d3"/>
+      <path d="M1440 288H1568V352 M1760 288V352H1888" stroke="#46d160"/>
+    </g>
+    <path d="M288 160V224 M1568 224H1632" stroke="#fff" stroke-width="4" stroke-dasharray="6 12" stroke-linecap="round" fill="none" opacity=".8"/>
+    <rect width="1920" height="384" fill="url(#dots)"/>
+  </g>
+
+  <!-- logo tile -->
+  <svg x="515" y="112" width="160" height="160" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="14" fill="#fff"/>
+    <rect x="13" y="30" width="19" height="20" rx="1" fill="#ff4500" opacity=".25"/>
+    <g fill="none" stroke="#ff4500" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M13 30 32 12 51 30"/>
+      <path d="M13 30H32V50H13Z"/>
+      <path d="M32 30H51M51 30V50"/>
+    </g>
+    <path d="M32 50H51" stroke="#ff4500" stroke-width="2" stroke-dasharray="1.5 3.5" stroke-linecap="round"/>
+    <g fill="#1a1a1b" stroke="#fff" stroke-width="1.6">
+      <circle cx="32" cy="12" r="3.4"/>
+      <circle cx="13" cy="30" r="3.4"/><circle cx="32" cy="30" r="3.4"/><circle cx="51" cy="30" r="3.4"/>
+      <circle cx="13" cy="50" r="3.4"/><circle cx="32" cy="50" r="3.4"/><circle cx="51" cy="50" r="3.4"/>
+    </g>
+  </svg>
+
+  <g font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" fill="#fff">
+    <text x="707" y="208" font-size="100" font-weight="800" letter-spacing="-2">House of Dots</text>
+    <text x="711" y="262" font-size="34" font-weight="600" opacity=".92">Draw lines · Steal boxes · Beat your friends</text>
+  </g>
+</svg>

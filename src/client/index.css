@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-bg: #f6f7f8;
+  --color-card: #ffffff;
+  --color-card-hi: #e5ebee;
+  --color-fg: #0f1a1c;
+  --color-muted: #576f76;
+
+  --animate-pop: pop 0.35s cubic-bezier(0.3, 1.6, 0.5, 1);
+  @keyframes pop {
+    from {
+      transform: scale(0.2);
+      opacity: 0;
+    }
+  }
+}
+
+/* Reddit's iframe follows the user's light/dark setting via the media query */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0e1113;
+    --color-card: #1a1d21;
+    --color-card-hi: #2a3036;
+    --color-fg: #f2f4f5;
+    --color-muted: #8ba2ad;
+  }
+}
